@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  
+  
+  <Properties>
+  <Property name="basepath"> ./logs</Property>
+  </Properties>
+  
+  <Appenders>
+    <Console name="CONSOLE"> 
+      <PatternLayout pattern="%p - %m%n"/>
+    </Console>
+    <File name="FILE" fileName="logs/main.log"> 
+      <JsonTemplateLayout/>
+    </File>
+  </Appenders>
+  
+  <Loggers>
+    <Root level="INFO"> 
+      <AppenderRef ref="FILE" />
+    </Root>
+  </Loggers>
+</Configuration>
